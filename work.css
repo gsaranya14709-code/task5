@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+}
+
+header h2 {
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d8ff3e;
+}
+
+main {
+    padding: 80px 8%;
+}
+
+.tag {
+    color: #d8ff3e;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: clamp(55px, 9vw, 120px);
+    line-height: 0.9;
+    margin: 20px 0 80px;
+    letter-spacing: -5px;
+}
+
+h1 span {
+    color: #d8ff3e;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 25px 0;
+    margin-bottom: 80px;
+}
+
+.skills h2 {
+    margin-right: 20px;
+}
+
+.skills p {
+    border: 1px solid #444;
+    padding: 10px 16px;
+    border-radius: 30px;
+    color: #ccc;
+}
+.skills:hover{
+    transform: scale(1.1);
+}
+.skills p:hover{
+    transform: scale(1.1);
+    border-radius: 0;
+    background-color:  #ccc;
+    color: #101010;
+    
+}
+
+.skills small {
+    color: #d8ff3e;
+}
+
+.projects {
+    display: flex;
+    gap: 25px;
+}
+
+.projects article {
+    flex: 1;
+    min-height: 280px;
+    padding: 30px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.4s;
+}
+
+.projects article:hover {
+    background: #d8ff3e;
+    color: #101010;
+    transform: translateY(-12px) rotate(-2deg);
+}
+
+.projects span {
+    color: #d8ff3e;
+}
+
+.projects article:hover span {
+    color: #101010;
+}
+
+.projects h2 {
+    font-size: 30px;
+}
+
+.projects p {
+    color: #999;
+    line-height: 1.6;
+}
+
+.projects article:hover p {
+    color: #333;
+}
+
+.projects a {
+    color: white;
+    text-decoration: none;
+}
+
+.projects article:hover a {
+    color: #101010;
+}
+
+@media (max-width: 750px) {
+    main {
+        padding: 60px 6%;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+
+    .skills {
+        gap: 10px;
+    }
+
+    .skills h2 {
+        width: 100%;
+    }
+}

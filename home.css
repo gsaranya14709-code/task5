@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+}
+header h2 {
+    font-size: 28px;
+}
+nav {
+    display: flex;
+    gap: 35px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: #d8ff3e;
+    transition: 0.3s;
+}
+nav a:hover::after {
+    width: 100%;
+}
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 8%;
+}
+article {
+    animation: show 1s ease ;
+}
+.small {
+    color: #d8ff3e;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+h1 {
+    font-size: clamp(60px, 9vw, 130px);
+    line-height: 0.85;
+    letter-spacing: -7px;
+}
+h1 span {
+    color: #d8ff3e;
+}
+.txt {
+    max-width: 430px;
+    color: #aaa;
+    line-height: 1.7;
+    margin: 35px 0;
+}
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border: 1px solid #d8ff3e;
+    color: #d8ff3e;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #d8ff3e;
+    color: #101010;
+    transform: translateY(-5px);
+}
+figure {
+    width: 330px;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 180px 180px 20px 20px;
+    border: 1px solid #444;
+    animation: float 4s ease-in-out infinite;
+}
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+@media (max-width: 700px) {
+    header {
+        padding: 0 5%;
+    }
+    nav {
+        gap: 15px;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 45px;
+        padding-bottom: 80px;
+    }
+    figure {
+        width: 240px;
+        height: 300px;
+    }
+    .txt {
+        margin: 25px auto;
+    }
+    h1 {
+        letter-spacing: -4px;
+    }
+}
